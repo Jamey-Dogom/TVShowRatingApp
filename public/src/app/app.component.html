@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>TV RATER</title>
+</head>
+
+<body>
+  <div class="container">
+      <div class = "thisRowHeight">
+    <div class="row ">
+      
+      <div class="col-lg-4 create">
+        <h1>ADD A TV SHOW</h1>
+        <form (submit)="onSubmit()">
+          <div class="form-group">
+            <label for="newShow.title">Show Title:</label>
+            <input type="text" class="form-control" name="newShow.name" [(ngModel)]="newShow.name"
+              aria-describedby="emailHelp" placeholder="Enter Show">
+            <small id="emailHelp" class="form-text text-muted">Make sure the show isn't already in our databse.</small>
+          </div>
+          <div class="form-group">
+            <label for="newShow.title">Show Image URL:</label>
+            <input type="text" class="form-control" name="newShow.image" [(ngModel)]="newShow.image"
+              placeholder="Enter URl">
+          </div>
+          <button type="submit" class="btn btn-primary mgb">Submit</button>
+        </form>
+      </div>
+
+      <div class="col-lg-8 rate overflow-auto">
+        <h1>RATE A TV SHOW</h1>
+      
+          <app-rate></app-rate> 
+        
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-lg-12 display">
+        <h1>DISPLAY INFO HERE</h1>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

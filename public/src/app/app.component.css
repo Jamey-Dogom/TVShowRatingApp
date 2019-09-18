@@ -1,0 +1,50 @@
+.container {
+    margin-top: 5%;
+}
+
+.newTask {
+    margin-bottom: 5%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card {
+    margin-bottom: 2%;
+    margin-left: 1%;
+    display: inline-block;
+}
+
+input {
+    margin-right: 2%;
+}
+
+h1, h2, h3 {
+    color: white;
+}
+
+.rs {
+    margin-right: 2%;
+}
+
+.create {
+    background-color: skyblue;
+}
+
+.display {
+    background-color: orange;
+    margin-top: 1%
+}
+
+.rate {
+    background-color: purple;
+}
+
+.ilb {
+    display: inline-block;
+}
+
+.mgb {
+    margin-bottom: 2%;
+}

@@ -21,4 +21,9 @@ app.put('/shows/:id/', shows.edit);
 app.delete('/shows/:id', shows.delete);
 
 
+////////////
+
+app.post('/shows/:id/rates', shows.rateCreate);
+
+
 }
