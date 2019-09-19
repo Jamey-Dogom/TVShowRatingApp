@@ -6,6 +6,10 @@
     margin-bottom: 5%;
 }
 
+.com {
+    background-color: teal;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -32,13 +36,23 @@ h1, h2, h3 {
     background-color: skyblue;
 }
 
+.creates {
+    background-color: skyblue;
+}
+
 .display {
-    background-color: orange;
+    background-color: rgb(187, 175, 14);
     margin-top: 1%
 }
 
 .rate {
-    background-color: purple;
+    background-color: rgb(31, 106, 192);
+    height: 500px;
+}
+
+.rates {
+    background-color: rgb(31, 106, 192);
+    height: 500px;
 }
 
 .ilb {
@@ -48,3 +62,4 @@ h1, h2, h3 {
 .mgb {
     margin-bottom: 2%;
 }
+

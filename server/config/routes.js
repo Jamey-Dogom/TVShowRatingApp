@@ -12,7 +12,7 @@ app.get('/shows', shows.findAll)
 app.post('/shows', shows.create);
 
 // Find a show by id
-app.get('/tasks/:id', shows.findOne);
+app.get('/shows/:id', shows.findOne);
 
 // Update a show
 app.put('/shows/:id/', shows.edit);

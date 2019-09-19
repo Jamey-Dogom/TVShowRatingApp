@@ -36,18 +36,32 @@
 
       <div class="col-lg-8 rate overflow-auto">
         <h1>RATE A TV SHOW</h1>
-      
-          <app-rate></app-rate> 
+          <app-rate (aTaskEventEmitter)="dataFromChild($event)" (newRatings)="newRatingInput($event)" *ngIf="allShows" [shows]="allShows"></app-rate> 
         
         </div>
       </div>
 
     </div>
     <div class="row">
-      <div class="col-lg-12 display">
-        <h1>DISPLAY INFO HERE</h1>
+        <div class="col-lg-12 display">
+          <h1>DISPLAY INFO HERE</h1>
+          <div class="row" *ngIf="displayShow">
+            <div class="col-lg-8  rates overflow-auto">
+                <h3>{{displayShow.name}}</h3>
+              <img [src]="displayShow.image" alt="displayShow.title" style = "height: 350px; width: 400px;"/>
+            </div>
+            <div class="col-lg-4 creates">
+              <h3>Average rating: stars</h3>
+              <div class = "com" *ngFor="let rating of displayShow.rate">
+              <h4>{{rating.comment}}</h4> 
+              <h4>{{rating.value}} stars</h4>    
+            </div>         
+            </div>
+  
+          </div>
+        </div>
       </div>
-    </div>
+  
   </div>
 
 </body>

@@ -1,23 +1,24 @@
-<div class="row rate overflow-auto">
-        <div class="col-lg-6 create">
-            IMAGE
-            </div>
-            <div class="col-lg-6 create">
-                    <form>
-                            <div class="form-group">
-                              <select class="form-control" id="exampleFormControlSelect1">
-                                <option>5 stars</option>
-                                <option>4 stars</option>
-                                <option>3 stars</option>
-                                <option>2 stars</option>
-                                <option>1 star</option>
-                              </select>
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleFormControlTextarea1">Comment</label>
-                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-success mgb">Submit</button>
-                          </form>
-            </div>
+<div class="row rate" *ngFor="let show of shows; let in = index">
+  <div class="col-lg-6 create">
+    <img [src]="show.image" alt="show.name" style="height: 229px; width: 290px;" (click)='triggerEvent(show._id)'>
+  </div>
+  <div class="col-lg-6 create">
+    
+    <form (submit)="submitRating(in, show._id)">
+      <div class="form-group">
+        <select class="form-control" name="newRating-val" [(ngModel)]="newRating.value[in]">
+          <option>5 stars</option>
+          <option>4 stars</option>
+          <option>3 stars</option>
+          <option>2 stars</option>
+          <option>1 star</option>
+        </select>
       </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Comment</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="newRating-com" [(ngModel)]="newRating.comment[in]" ></textarea>
+      </div>
+      <input class="btn btn-success" type="submit" value="Submit" />
+    </form>
+  </div>
+</div>
